@@ -6,7 +6,7 @@ const a = () =>
       resolve(111)
     }, 2000)
   })
-a().then((res) => {
+a().then(res => {
   console.log(res)
 })
 
@@ -20,6 +20,18 @@ dd()
 const b = new Promise((resolve, reject) => {
   resolve(222)
 })
-b.then((res) => {
+b.then(res => {
   console.log(res)
 })
+
+function loadAsset() {
+  let xhr = new XMLHttpRequest()
+  xhr.open('get', 'http://www.baidu.com')
+  xhr.responseType = 'json'
+
+  xhr.onload = function () {
+    console.log(123)
+  }
+
+  xhr.send()
+}
