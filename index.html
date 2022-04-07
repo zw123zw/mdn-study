@@ -48,6 +48,19 @@
 
     <button class="full">点击全屏</button>
 
+    <div class="dropzone">
+      <div
+        id="draggable"
+        draggable="true"
+        ondragstart="event.dataTransfer.setData('text/plain',null)"
+      >
+        This div is draggable
+      </div>
+    </div>
+    <div class="dropzone"></div>
+    <div class="dropzone"></div>
+    <div class="dropzone"></div>
+
     <script src="./js/index.js"></script>
   </body>
 </html>
